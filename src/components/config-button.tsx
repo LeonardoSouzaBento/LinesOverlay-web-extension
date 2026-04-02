@@ -80,6 +80,7 @@ export function ConfigButton({
             <Button
               style={{
                 outlineWidth: 1,
+                color: "#000",
               }}
               variant={"transparent"}
               size="icon-sm"
@@ -95,9 +96,10 @@ export function ConfigButton({
                   Icon={open ? ChevronDown : ChevronUp}
                   size={"xl"}
                   strokeWidth="light"
+                  color="#000"
                 />
               ) : (
-                <Icon Icon={EyeOff} size="sm" strokeWidth="light" />
+                <Icon Icon={EyeOff} size="sm" strokeWidth="light" color="#000" />
               )}
             </Button>
           ) : (

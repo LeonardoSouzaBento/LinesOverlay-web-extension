@@ -39,7 +39,6 @@ const css = {
   },
   label: {
     display: "block",
-    backgroundColor: "white",
     fontWeight: 500,
     marginBottom: 4,
     fontSize: 14,
@@ -52,6 +51,8 @@ const css = {
     paddingInline: 8,
     boxSizing: "border-box",
     fontSize: 14,
+    color: "#000",
+    backgroundColor: "rgba(255,255,255,0.50)",
   },
   quickRow: {
     display: "flex",
@@ -61,6 +62,7 @@ const css = {
   quickButton: {
     fontWeight: 500,
     borderRadius: 999,
+    backgroundColor: "rgba(255,255,255,0.50)",
   },
   colorSection: {
     marginBottom: 12,
@@ -160,7 +162,7 @@ export function ConfigOptions(props: ConfigOptionsProps) {
           }
         }}
       >
-       <Icon Icon={RotateCw} /> Rotacionar
+        <Icon Icon={RotateCw} /> Rotacionar
       </Button>
     </div>
   );
