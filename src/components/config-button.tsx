@@ -12,7 +12,8 @@ const css = {
     pointerEvents: "auto",
     height: 40,
     border: "1px solid rgba(148,163,184,0.5)",
-    backgroundColor: "rgba(255,255,255,0.70)",
+    backgroundColor: "rgb(255,255,255)",
+    color: "#000",
     boxShadow: "0 1px 3px rgba(15,23,42,0.2)",
     display: "flex",
     alignItems: "center",
@@ -42,14 +43,12 @@ interface Props {
   open: boolean;
   onToggleConfig: () => void;
   setShowLines: StateSetter<boolean>;
-  onDismount: (e: React.MouseEvent) => void;
 }
 
 export function ConfigButton({
   onToggleConfig,
   open,
   setShowLines,
-  onDismount,
 }: Props) {
   const handleClick = (
     e: React.MouseEvent<HTMLButtonElement>,
@@ -105,7 +104,7 @@ export function ConfigButton({
             <Separator orientation="vertical" />
           ),
         )}
-        <DismountButton onDismount={onDismount} />
+        <DismountButton />
       </div>
     </div>
   );

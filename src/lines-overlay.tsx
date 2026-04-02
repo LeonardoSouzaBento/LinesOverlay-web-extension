@@ -35,10 +35,9 @@ const css = {
 type Props = {
   showLines: boolean;
   setShowLines: StateSetter<boolean>;
-  onDismount: (e: React.MouseEvent) => void;
 };
 
-function LinesOverlayCore({ showLines, setShowLines, onDismount }: Props) {
+function LinesOverlayCore({ showLines, setShowLines }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [lines, setLines] = useState(2);
   const [gap, setGap] = useState(24);
@@ -90,7 +89,6 @@ function LinesOverlayCore({ showLines, setShowLines, onDismount }: Props) {
         setShowLines={setShowLines}
         onToggleConfig={() => setShowConfig((v) => !v)}
         open={showConfig}
-        onDismount={onDismount}
       />
       {showConfig && (
         <ConfigOptions
@@ -111,16 +109,8 @@ function LinesOverlayCore({ showLines, setShowLines, onDismount }: Props) {
 }
 
 export function LinesOverlay() {
-  const [showComponent, setShowComponent] = useState(true);
   const [showLines, setShowLines] = useState(true);
 
-  function onDismount(e: React.MouseEvent) {
-    e.stopPropagation();
-    setShowComponent(false);
-    window.dispatchEvent(new Event("lines-overlay-dismount"));
-  }
-
-  if (!showComponent) return null;
 
   return (
     <div
@@ -138,7 +128,6 @@ export function LinesOverlay() {
       <LinesOverlayCore
         setShowLines={setShowLines}
         showLines={showLines}
-        onDismount={onDismount}
       />
 
       <Button
@@ -152,7 +141,7 @@ export function LinesOverlay() {
       >
         <Icon Icon={Eye} size="xl" />
         Mostrar linhas <span style={{ color: "#787878ff" }}>( Ctrl + ; )</span>
-        <DismountButton onDismount={onDismount} />
+        <DismountButton />
       </Button>
     </div>
   );

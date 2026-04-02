@@ -39,6 +39,7 @@ const css = {
   },
   label: {
     display: "block",
+    backgroundColor: "white",
     fontWeight: 500,
     marginBottom: 4,
     fontSize: 14,
@@ -50,6 +51,7 @@ const css = {
     border: "1px solid #e5e7eb",
     paddingInline: 8,
     boxSizing: "border-box",
+    fontSize: 14,
   },
   quickRow: {
     display: "flex",

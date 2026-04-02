@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lines Overlay</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      padding: 16px;
+      margin: 0;
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background-color: #ffffff;
+    }
+    button {
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    button:hover {
+      opacity: 0.85;
+    }
+    #ativar {
+      background-color: #2563eb;
+      color: white;
+    }
+    #desativar {
+      background-color: #ef4444;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button id="ativar">Ativar</button>
+  <button id="desativar">Desativar</button>
+  <script src="popup.js"></script>
+</body>
+</html>
