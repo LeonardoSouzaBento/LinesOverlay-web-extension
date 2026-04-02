@@ -3,8 +3,8 @@
 Extensão de navegador usada para medir espaçamentos entre elementos de sites (veja as imagens abaixo).
 
 <div style="display: flex; max-width: max-content;">
-  <img src="./src/assets/exemplo.png" width="400" />
-  <img src="./src/assets/exemplo1.png" width="400" style="margin-left: 12px;" />
+  <img src="./src/assets/exemplo.png" width="370" />
+  <img src="./src/assets/exemplo1.png" width="370" style="margin-left: 12px;" />
 </div>
 
 ## 1 - Download e configuração
