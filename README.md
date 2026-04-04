@@ -17,11 +17,14 @@ Extensão de navegador usada para medir espaçamentos entre elementos de sites (
 
 ## 2 - Instalação no navegador
 
-1. Abra o navegador Google Chrome
-2. Digite na barra de endereço: chrome://extensions
+1. Abra seu navegador
+2. Digite na barra de endereço: chrome://extensions e dê enter
 3. Habilite o modo de desenvolvedor
 4. Clique em "Carregar sem compactação"
 5. Selecione a pasta do repositório, depois abra/escolha a pasta `dist`
+
+> Caso você faça alterações no código, clique no botão de recarregar a extensão, pois não é necessário apagar a extensão e instalar novamente.
+> Em caso de falhas, recarregue a página.
 
 ## 3 - Como usar a extensão
 
