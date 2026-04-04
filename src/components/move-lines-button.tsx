@@ -63,7 +63,7 @@ export function MoveLinesButton({
   return (
     <div style={css.wrapper}>
       <Button
-        size="icon-sm"
+        size="icon"
         data-black
         variant="ghost"
         onMouseDown={onMouseDown}

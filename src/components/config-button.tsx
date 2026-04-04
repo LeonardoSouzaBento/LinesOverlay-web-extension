@@ -32,6 +32,7 @@ const css = {
     height: "100%",
     display: "flex",
     alignItems: "center",
+    paddingRight: 2,
     gap: 4,
   },
   closeIcon: {
@@ -45,11 +46,7 @@ interface Props {
   setShowLines: StateSetter<boolean>;
 }
 
-export function ConfigButton({
-  onToggleConfig,
-  open,
-  setShowLines,
-}: Props) {
+export function ConfigButton({ onToggleConfig, open, setShowLines }: Props) {
   const handleClick = (
     e: React.MouseEvent<HTMLButtonElement>,
     item: number,
@@ -94,16 +91,21 @@ export function ConfigButton({
               {item === 1 ? (
                 <Icon
                   Icon={open ? ChevronDown : ChevronUp}
-                  size={"xl"}
-                  strokeWidth="light"
+                  size={"3xl"}
+                  strokeWidth="thin"
                   color="#000"
                 />
               ) : (
-                <Icon Icon={EyeOff} size="sm" strokeWidth="light" color="#000" />
+                <Icon
+                  Icon={EyeOff}
+                  size="xl"
+                  strokeWidth="thin"
+                  color="#000"
+                />
               )}
             </Button>
           ) : (
-            <Separator orientation="vertical" />
+            <Separator orientation="vertical" style={{ height: "66%" }} />
           ),
         )}
         <DismountButton />

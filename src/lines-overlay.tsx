@@ -12,7 +12,7 @@ import { Button, Icon } from "./ui";
 const css = {
   overlay: {
     position: "absolute" as const,
-    top: 175,
+    top: "calc(50dvh - 24px)",
     left: 0,
     width: "100%",
     pointerEvents: "none" as const,
@@ -20,15 +20,14 @@ const css = {
     justifyContent: "center",
     zIndex: 10,
   },
-  grid: {
-    width: "100%",
-  },
   triggerButton: {
     position: "absolute" as const,
     bottom: 8,
     right: 8,
+    paddingRight: 5,
     zIndex: 20,
     backgroundColor: "rgba(255,255,255,0.90)",
+    boxShadow: "0 1px 3px rgba(15,23,42,0.2)",
   },
 } as const;
 
@@ -57,9 +56,9 @@ function LinesOverlayCore({ showLines, setShowLines }: Props) {
     return () => window.removeEventListener("keydown", handler);
   }, []);
 
-  if (!showLines) return null;
-
   const height = lines * gap - 0.625 * lines;
+
+  if (!showLines) return null;
 
   return (
     <>
@@ -67,8 +66,8 @@ function LinesOverlayCore({ showLines, setShowLines }: Props) {
         {/* linhas */}
         <div
           style={{
-            ...css.grid,
-            height,
+            width: rotate === 0 ? "100%" : "100dvh",
+            height: rotate === 0 ? height : "100%",
             backgroundImage: `repeating-linear-gradient(
                 to bottom,
                 ${color},
@@ -111,7 +110,6 @@ function LinesOverlayCore({ showLines, setShowLines }: Props) {
 export function LinesOverlay() {
   const [showLines, setShowLines] = useState(true);
 
-
   return (
     <div
       style={{
@@ -125,13 +123,9 @@ export function LinesOverlay() {
         color: "#000",
       }}
     >
-      <LinesOverlayCore
-        setShowLines={setShowLines}
-        showLines={showLines}
-      />
+      <LinesOverlayCore setShowLines={setShowLines} showLines={showLines} />
 
       <Button
-        size="sm"
         variant="ghost"
         style={{
           ...css.triggerButton,
@@ -139,8 +133,11 @@ export function LinesOverlay() {
         }}
         onClick={() => setShowLines((v) => !v)}
       >
-        <Icon Icon={Eye} size="xl" />
-        Mostrar linhas <span style={{ color: "#787878ff" }}>( Ctrl + ; )</span>
+        <Icon Icon={Eye} size="3xl" strokeWidth="light" />
+        Ver Linhas
+        <span style={{ color: "#787878ff", fontSize: 14 }}>
+          Ctrl + <strong>;</strong>
+        </span>
         <DismountButton />
       </Button>
     </div>

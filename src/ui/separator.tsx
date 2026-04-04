@@ -3,7 +3,7 @@ import * as React from 'react';
 const css = {
   base: {
     flexShrink: 0,
-    backgroundColor: '#e5e7eb',
+    backgroundColor: 'hsl(220, 13%, 85%)',
   },
   horizontal: {
     height: 1,

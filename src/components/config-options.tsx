@@ -13,12 +13,13 @@ const css = {
     backdropFilter: "blur(4px)",
     boxShadow: "0 4px 6px rgba(15,23,42,0.12)",
     border: "1px solid rgba(148,163,184,0.3)",
-    borderRadius: 8,
+    borderRadius: 6,
     paddingInline: 12,
     paddingBlock: 10,
     width: "auto",
     display: "flex",
     flexDirection: "column",
+    alignItems: "flex-end",
     gap: 4,
   },
   fieldRow: {
@@ -40,7 +41,7 @@ const css = {
   label: {
     display: "block",
     fontWeight: 500,
-    marginBottom: 4,
+    marginBottom: 5,
     fontSize: 14,
   },
   numberInput: {
@@ -153,7 +154,7 @@ export function ConfigOptions(props: ConfigOptionsProps) {
       <Button
         variant="ghost"
         size="sm"
-        style={{ maxWidth: "max-content" }}
+        style={{ width: "100%" }}
         onClick={() => {
           if (props.rotate === 0) {
             props.setRotate(90);
@@ -162,7 +163,7 @@ export function ConfigOptions(props: ConfigOptionsProps) {
           }
         }}
       >
-        <Icon Icon={RotateCw} /> Rotacionar
+        <Icon Icon={RotateCw} size="xl" strokeWidth="light" /> Rotacionar
       </Button>
     </div>
   );

@@ -1,7 +1,7 @@
 import * as React from "react";
 
 type ButtonVariant = "default" | "ghost" | "transparent";
-type ButtonSize = "default" | "sm" | "icon-sm";
+type ButtonSize = "default" | "sm" | "icon" | "icon-sm";
 
 const styles = {
   base: {
@@ -44,16 +44,21 @@ const styles = {
       paddingInline: 12,
       paddingBlock: 10,
     },
+    icon: {
+      width: 36,
+      height: 36,
+      padding: 0,
+    },
     "icon-sm": {
-      width: 32,
-      height: 32,
+      width: 28,
+      height: 28,
       padding: 0,
     },
   } satisfies Record<ButtonSize, React.CSSProperties>,
 
   selected: {
-    border: "2px solid #60a5fa",
-    color: "#0ea5e9",
+    border: "2px solid #60a5faef",
+    color: "hsl(198, 90%, 33%)",
     backgroundColor: "rgba(59,130,246,0.08)",
   } satisfies React.CSSProperties,
 

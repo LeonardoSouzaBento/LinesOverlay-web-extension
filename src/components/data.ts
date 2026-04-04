@@ -19,7 +19,7 @@ export type ConfigOptionsProps = {
 };
 
 export type NumberFieldConfig = {
-  key: 'lines' | 'gap' | 'opacity';
+  key: "lines" | "gap" | "opacity";
   label: string;
   step?: number;
   quick: number[];
@@ -27,30 +27,32 @@ export type NumberFieldConfig = {
 
 export const NUMBER_FIELDS: NumberFieldConfig[] = [
   {
-    key: 'lines',
-    label: 'Linhas',
-    quick: [2, 4, 8, 12],
-    step: 4,
+    key: "lines",
+    label: "Linhas",
+    quick: [2, 4, 6, 8, 10],
+    step: 2,
   },
   {
-    key: 'gap',
-    label: 'Gap',
+    key: "gap",
+    label: "Gap",
     quick: [16, 24, 32, 40, 48],
     step: 4,
   },
   {
-    key: 'opacity',
-    label: 'Opacidade',
-    quick: [0.2, 0.4, 0.6, 0.8],
+    key: "opacity",
+    label: "Opacidade",
+    quick: [0.2, 0.4, 0.6, 0.8, 1],
     step: 0.05,
   },
 ];
 
 export const colorOptions = [
-  { name: 'Azul', value: '#2563eb' },
-  { name: 'Amarelo', value: '#eab308' },
-  { name: 'Verde', value: '#16a34a' },
-  { name: 'Roxo', value: '#7c3aed' },
-  { name: 'Violeta', value: '#9333ea' },
-  { name: 'Violeta', value: '#d71212' },
+  { name: "Azul", value: "#2563eb" },
+  { name: "Amarelo", value: "#eab308" },
+  { name: "Verde", value: "#16a34a" },
+  { name: "Roxo", value: "#7c3aed" },
+  { name: "Violeta", value: "#9333ea" },
+  { name: "Vermelho", value: "#d71212" },
+  { name: "Preto", value: "#000000" },
+  { name: "Ciano", value: "#06b6d4" },
 ];
