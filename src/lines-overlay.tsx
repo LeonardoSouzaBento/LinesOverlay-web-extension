@@ -59,7 +59,7 @@ function LinesOverlayCore({ showLines, setShowLines }: Props) {
 
   if (!showLines) return null;
 
-  const height = lines * gap;
+  const height = lines * gap - 0.625 * lines;
 
   return (
     <>
