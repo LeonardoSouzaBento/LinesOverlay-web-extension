@@ -7,31 +7,45 @@ Extensão de navegador usada para medir espaçamentos entre elementos de sites (
   <img src="./src/assets/exemplo1.png" width="370" style="margin-left: 12px;" />
 </div>
 
-## 1 - Download e configuração (via terminal)
+## Baixar a extensão
 
-1. Abra seu editor de código
-2. Abra o terminal e rode o comando: `git clone https://github.com/LeonardoSouzaBento/UI_Ruler-web_extension`
-3. Navegue até a pasta do projeto, rode: `cd UI_Ruler-web_extension`
-4. Rode `npm install`
-5. Rode `npm run build`
+### Pré-requisitos
 
-## 2 - Instalação no navegador
+- Node.js (v18 ou superior)
+- npm (ou yarn/pnpm)
 
-1. Abra seu navegador
-2. Digite na barra de endereço: chrome://extensions e dê enter
-3. Habilite o modo de desenvolvedor
-4. Clique em "Carregar sem compactação"
-5. Selecione a pasta do repositório, depois abra/escolha a pasta `dist`
+### No terminal do seu computador:
 
-> Caso você faça alterações no código, clique no botão de recarregar a extensão, pois não é necessário apagar a extensão e instalar novamente.
+1. Clone o repositório e navegue até a pasta do projeto:
 
-> Em caso de falhas, recarregue a página.
+   ```bash
+   git clone https://github.com/LeonardoSouzaBento/UI_Ruler-web_extension
+   cd UI_Ruler-web_extension
+   ```
 
-## 3 - Como usar a extensão
+2. Instale as dependências:
 
-1. Clique no botão com o nome da extensão, na barra de ferramentas
-2. Clique no botão "Configurar" para abrir as opções, configure as linhas como desejar
-3. Clique no botão de ícone "X" vermelho para desativar a extensão
+   ```bash
+   npm install
+   ```
+
+3. Execute o build:
+   ```bash
+   npm run build
+   ```
+
+## Instalação da extensão no navegador
+
+1 - Abra o seu navegador (Brave, Chrome ou Edge).
+
+2 - Vá para a página de extensões digitando na barra de endereço: chrome://extensions
+
+3 - Ative o Modo do desenvolvedor (chave seletora no canto superior direito).
+
+4 - Clique no botão Carregar sem compactação (ou Load unpacked).
+
+5 - Na janela que abrir, navegue até a pasta do seu projeto, entre em .output e selecione a pasta chrome-mv3.
+
 
 ### Por que essa extensão é útil?
 
@@ -47,3 +61,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - **[vite-plugin-web-extension](https://vite-plugin-web-extension.aklinker1.io/)**
 - **[Lucide React](https://lucide.dev/)**
 - **[ESLint](https://eslint.org/)**
+
+## License
+
+[MIT](LICENSE)
